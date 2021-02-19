@@ -26,7 +26,7 @@
 		//클릭된 태그를 삭제
 		var len = document.getElementsByTagName("div").length;
 		console.log(len, '개')
-//		document.body.removeChild(div);
+		document.body.removeChild(div);
 	}
 </script>
 </body>
