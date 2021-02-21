@@ -23,10 +23,18 @@
 	}
 	function clickHandler(e) {
 		console.log(e.target.innerHTML, '클릭됨')
+		var dd = document.createElement("div");
+		dd.innerHTML = 'Game Over'
 		//클릭된 태그를 삭제
 		var len = document.getElementsByTagName("div").length;
 		console.log(len, '개')
-		document.body.removeChild(div);
+		if(len > 1){
+			for(i = 0; i < len; i--){
+				document.body.removeChild(e.target);
+			}
+		}else if(len = 1){
+			document.body.appendChild(dd);
+		}
 	}
 </script>
 </body>
